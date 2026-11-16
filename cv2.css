@@ -1,0 +1,71 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #151515;
+  background-color: #f3efea;
+  background-image:
+    linear-gradient(#e8e2da 1px, transparent 1px),
+    linear-gradient(90deg, #e8e2da 1px, transparent 1px);
+  background-size: 24px 24px;
+  padding: 40px 20px;
+}
+
+.darren-kartu {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 2px solid #151515;
+  border-radius: 18px;
+  box-shadow: 10px 10px 0 #151515;
+  overflow: hidden;
+}
+
+.darren-kepala { display: flex; gap: 28px; padding: 32px; align-items: center; }
+
+.darren-kepala > :first-child { position: relative; flex-shrink: 0; width: 230px; }
+.darren-kepala > :first-child > a:first-child { display: block; transform: rotate(-4deg); border: 2px solid #151515; border-radius: 16px; overflow: hidden; box-shadow: 4px 4px 0 #151515; }
+.darren-kepala > :first-child img { display: block; width: 100%; height: 300px; object-fit: cover; }
+.darren-kepala > :first-child > a:last-child {
+  position: absolute; right: -18px; bottom: 14px;
+  background: #2f6fed; color: #ffffff;
+  border: 2px solid #151515; border-radius: 999px;
+  padding: 6px 14px; font-weight: 700; font-size: 13px;
+  text-decoration: none; transform: rotate(-4deg);
+}
+.darren-kepala > :first-child > a:last-child:hover { background: #1f55c4; }
+
+.darren-sekolah { font-size: 12px; font-weight: 600; color: #555555; }
+h1 { font-family: "Arial Black", "Segoe UI", sans-serif; font-size: 54px; line-height: 1.05; margin: 8px 0 12px; letter-spacing: -1px; }
+h1 span { background: #2f6fed; color: #ffffff; padding: 0 8px; display: inline-block; }
+.darren-ringkas { font-size: 14px; color: #444444; max-width: 460px; line-height: 1.5; }
+
+.darren-kontak { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px 18px; margin-top: 20px; }
+.darren-kontak dt { font-size: 11px; color: #777777; }
+.darren-kontak dd { font-size: 12px; font-weight: 700; word-break: break-word; }
+.darren-kontak div:last-child { grid-column: 1 / -1; }
+
+.darren-strip { background: #151515; overflow: hidden; white-space: nowrap; padding: 12px 0; }
+.darren-jalur { display: inline-block; animation: geser 28s linear infinite; }
+.darren-jalur span { display: inline-block; margin: 0 22px; font-weight: 800; font-size: 14px; color: #ffffff; }
+.darren-jalur span:nth-child(even) { color: #5aa2ff; }
+@keyframes geser { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+.darren-bagian { padding: 28px 32px 8px; }
+.darren-bagian h2 { font-size: 20px; margin-bottom: 12px; }
+.darren-bagian h2 small { font-size: 11px; color: #3b5bdb; margin-right: 8px; }
+.darren-tentang { font-size: 14px; line-height: 1.6; max-width: 480px; margin-bottom: 18px; }
+
+.darren-info { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+.darren-info div { border: 1.5px solid #151515; border-radius: 10px; padding: 10px 12px; }
+.darren-info span { display: block; font-size: 11px; color: #777777; margin-bottom: 4px; }
+.darren-info strong { font-size: 13px; }
+
+.darren-pengalaman { list-style: none; display: grid; gap: 10px; padding-bottom: 28px; }
+.darren-pengalaman li { border-left: 4px solid #2f6fed; padding: 8px 12px; background: #faf7f3; font-size: 14px; }
+
+@media (max-width: 720px) {
+  .darren-kepala { flex-direction: column; align-items: flex-start; }
+  .darren-kontak, .darren-info { grid-template-columns: 1fr; }
+  h1 { font-size: 38px; }
+}

@@ -1,0 +1,104 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #14213d;
+  background: linear-gradient(180deg, #87ceeb 0%, #bfe4f5 45%, #f4fafd 100%);
+  min-height: 100vh;
+}
+
+.darren-vadinar-dv-atas {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 40px; background: #ffffff; border-bottom: 3px solid #f2b705;
+}
+.darren-vadinar-dv-merek { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #1b3a8a; font-weight: 800; font-size: 20px; }
+.darren-vadinar-dv-merek img { width: 38px; height: 38px; object-fit: contain; }
+.darren-vadinar-dv-atas nav { display: flex; align-items: center; gap: 8px; }
+.darren-vadinar-dv-atas nav a { text-decoration: none; color: #1b3a8a; font-weight: 600; padding: 8px 14px; border-radius: 999px; }
+.darren-vadinar-dv-atas nav a:hover { background: #eaf3fb; }
+.darren-vadinar-dv-atas nav .darren-vadinar-dv-nav-cv { background: #ff5a1f; color: #ffffff; border: 2px solid #14213d; }
+.darren-vadinar-dv-atas nav .darren-vadinar-dv-nav-cv:hover { background: #e24a12; }
+.darren-vadinar-dv-atas nav .darren-vadinar-dv-biru-bg { background: #2f6fed; }
+.darren-vadinar-dv-atas nav .darren-vadinar-dv-biru-bg:hover { background: #1f55c4; }
+
+.darren-vadinar-dv-hero {
+  max-width: 1100px; margin: 0 auto; padding: 56px 24px 40px;
+  display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center;
+}
+.darren-vadinar-dv-lencana { display: inline-block; background: #f2b705; color: #14213d; font-weight: 700; font-size: 12px; padding: 6px 14px; border-radius: 999px; border: 2px solid #14213d; }
+.darren-vadinar-dv-hero h1 { font-size: 52px; line-height: 1.08; margin: 16px 0; letter-spacing: -1px; color: #14213d; }
+.darren-vadinar-dv-sorot { background: #f2b705; padding: 0 10px; display: inline-block; transform: rotate(-2deg); }
+.darren-vadinar-dv-hero p { font-size: 17px; color: #3b4a6b; max-width: 460px; line-height: 1.55; }
+.darren-vadinar-dv-aksi { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+.darren-vadinar-dv-tombol {
+  text-decoration: none; background: #1b3a8a; color: #ffffff; font-weight: 700;
+  padding: 12px 26px; border-radius: 12px; border: 2px solid #14213d; box-shadow: 4px 4px 0 #14213d;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.darren-vadinar-dv-tombol:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 #14213d; }
+.darren-vadinar-dv-tombol-putih { background: #ffffff; color: #1b3a8a; }
+
+.darren-vadinar-dv-kolase { position: relative; height: 380px; }
+.darren-vadinar-dv-poster { position: absolute; width: 200px; height: 290px; object-fit: cover; border-radius: 16px; border: 3px solid #14213d; box-shadow: 6px 6px 0 #14213d; background: #dbe7f3; transition: transform 0.25s ease; }
+.darren-vadinar-dv-p1 { left: 20px; top: 40px; transform: rotate(-8deg); z-index: 3; }
+.darren-vadinar-dv-p2 { left: 150px; top: 0; transform: rotate(4deg); z-index: 2; }
+.darren-vadinar-dv-p3 { left: 270px; top: 60px; transform: rotate(12deg); z-index: 1; }
+.darren-vadinar-dv-poster:hover { transform: rotate(0deg) scale(1.06); z-index: 5; }
+
+.darren-vadinar-dv-pita { background: #f2b705; border-top: 3px solid #14213d; border-bottom: 3px solid #14213d; overflow: hidden; white-space: nowrap; padding: 12px 0; }
+.darren-vadinar-dv-pita-jalur { display: inline-block; animation: geser 30s linear infinite; }
+.darren-vadinar-dv-pita-jalur span { display: inline-block; margin: 0 28px; font-weight: 800; font-size: 15px; color: #14213d; text-transform: uppercase; letter-spacing: 1px; }
+.darren-vadinar-dv-pita-jalur span::after { content: "★"; margin-left: 56px; }
+@keyframes geser { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+.darren-vadinar-dv-isi { max-width: 1100px; margin: 0 auto; padding: 56px 24px 24px; }
+.darren-vadinar-dv-judul { font-size: 30px; color: #14213d; margin-bottom: 24px; }
+.darren-vadinar-dv-judul small { font-size: 13px; color: #2f6fed; margin-right: 10px; }
+
+.darren-vadinar-dv-grid-film { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 64px; }
+.darren-vadinar-dv-film { background: #ffffff; border: 2px solid #14213d; border-radius: 18px; padding: 16px; box-shadow: 6px 6px 0 #14213d; transition: transform 0.2s ease; }
+.darren-vadinar-dv-film:hover { transform: translateY(-6px); }
+.darren-vadinar-dv-film-gambar { position: relative; margin-bottom: 14px; }
+.darren-vadinar-dv-film-gambar img { display: block; width: 100%; height: 300px; object-fit: cover; border-radius: 12px; border: 2px solid #14213d; background: #dbe7f3; }
+.darren-vadinar-dv-skor {
+  position: absolute; right: -10px; top: -10px; width: 54px; height: 54px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: #f2b705; border: 2px solid #14213d; font-weight: 800; font-size: 18px; transform: rotate(8deg);
+}
+.darren-vadinar-dv-film h3 { font-size: 20px; color: #1b3a8a; margin-bottom: 6px; }
+.darren-vadinar-dv-film p { font-size: 14px; line-height: 1.55; color: #3b4a6b; }
+
+.darren-vadinar-dv-grid-tim { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-bottom: 36px; }
+.darren-vadinar-dv-profil {
+  --aksen: #1b3a8a;
+  display: flex; gap: 22px; align-items: center; text-decoration: none; color: #14213d;
+  background: #ffffff; border: 2px solid #14213d; border-radius: 20px; padding: 22px;
+  box-shadow: 8px 8px 0 var(--aksen); transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.darren-vadinar-dv-profil:hover { transform: translate(-3px, -3px); box-shadow: 11px 11px 0 var(--aksen); }
+.darren-vadinar-dv-oranye { --aksen: #ff5a1f; }
+.darren-vadinar-dv-biru { --aksen: #2f6fed; }
+.darren-vadinar-dv-profil-foto { width: 150px; height: 200px; flex-shrink: 0; object-fit: cover; object-position: top; border-radius: 16px; border: 3px solid #14213d; background: #dbe7f3; transform: rotate(-4deg); }
+.darren-vadinar-dv-label { display: inline-block; background: var(--aksen); color: #ffffff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 999px; }
+.darren-vadinar-dv-profil h3 { font-size: 24px; margin: 10px 0 6px; line-height: 1.15; }
+.darren-vadinar-dv-profil p { font-size: 14px; color: #5a6784; line-height: 1.45; margin-bottom: 10px; }
+.darren-vadinar-dv-chip { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; margin: 0 6px 6px 0; border: 1.5px solid #14213d; border-radius: 999px; }
+.darren-vadinar-dv-masuk { display: block; width: fit-content; margin-top: 10px; background: var(--aksen); color: #ffffff; font-weight: 700; padding: 10px 28px; border-radius: 10px; border: 2px solid #14213d; }
+
+.darren-vadinar-dv-statistik { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.darren-vadinar-dv-statistik div { background: #ffffff; border: 2px solid #14213d; border-radius: 16px; padding: 18px; text-align: center; box-shadow: 4px 4px 0 #14213d; }
+.darren-vadinar-dv-statistik strong { display: block; font-size: 36px; color: #1b3a8a; }
+.darren-vadinar-dv-statistik span { font-size: 13px; color: #5a6784; }
+
+.darren-vadinar-dv-kaki { text-align: center; padding: 36px 20px; color: #3b4a6b; font-size: 14px; }
+
+@media (max-width: 900px) {
+  .darren-vadinar-dv-hero { grid-template-columns: 1fr; }
+  .darren-vadinar-dv-kolase { display: none; }
+  .darren-vadinar-dv-hero h1 { font-size: 38px; }
+  .darren-vadinar-dv-grid-film, .darren-vadinar-dv-grid-tim, .darren-vadinar-dv-statistik { grid-template-columns: 1fr; }
+  .darren-vadinar-dv-atas { padding: 12px 18px; flex-wrap: wrap; gap: 8px; }
+  .darren-vadinar-dv-profil { flex-direction: column; align-items: flex-start; }
+}
